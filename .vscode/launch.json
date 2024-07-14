@@ -7,7 +7,8 @@
         {
             "name": "multi_model_demo",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "program": "lib/main.dart"
         },
         {
             "name": "multi_model_demo (profile mode)",

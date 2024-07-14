@@ -2,12 +2,11 @@ library injectable_package_demo;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
-// /// A Calculator.
-// class Calculator {
-//   /// Returns [value] plus 1.
-//   int addOne(int value) => value + 1;
-// }
+import 'package:injectable/injectable.dart';
+import 'package:injectable_package_demo/infrastructure/counter_repository.dart';
+import 'package:injectable_package_demo/injection.dart';
+import 'package:injectable_package_demo/presentation/counter_change_notifier.dart';
+import 'package:provider/provider.dart';
 
 class InjectableDemopackageButton extends StatelessWidget {
   const InjectableDemopackageButton({super.key});
@@ -18,7 +17,9 @@ class InjectableDemopackageButton extends StatelessWidget {
       onPressed: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => const InjectableDemoApp()),
+          MaterialPageRoute(
+              builder: (context) =>
+                  const CounterPage(title: "InjectableDemoApp")),
         );
       },
       child: Text("InjectableDemoApp"),
@@ -26,23 +27,58 @@ class InjectableDemopackageButton extends StatelessWidget {
   }
 }
 
-class InjectableDemoApp extends StatefulWidget {
-  const InjectableDemoApp({super.key});
+class CounterPage extends StatefulWidget {
+  const CounterPage({super.key, required this.title});
+
+  final String title;
 
   @override
-  State<InjectableDemoApp> createState() => _InjectableDemoAppState();
+  State<CounterPage> createState() => _CounterPageState();
 }
 
-class _InjectableDemoAppState extends State<InjectableDemoApp> {
+class _CounterPageState extends State<CounterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Injectable Demo"),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
       ),
-      body: SingleChildScrollView(
-        child: Container(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              'You have pushed the button this many times:',
+            ),
+            Consumer<CounterChangeNotifier>(
+              builder: (context, counter, child) {
+                return Text(
+                  '${counter.value}',
+                  style: Theme.of(context).textTheme.headlineLarge,
+                );
+              },
+            )
+          ],
+        ),
       ),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          FloatingActionButton(
+            heroTag: "decrement",
+            onPressed: Provider.of<CounterChangeNotifier>(context).decrement,
+            tooltip: 'decrement',
+            child: Icon(Icons.remove),
+          ),
+          FloatingActionButton(
+            heroTag: "increment",
+            onPressed: Provider.of<CounterChangeNotifier>(context).increment,
+            tooltip: 'Increment',
+            child: Icon(Icons.add),
+          ),
+        ],
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
