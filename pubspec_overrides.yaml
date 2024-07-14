@@ -1,0 +1,3 @@
+dependency_overrides:
+  injectable_package_demo:
+    path: packages/injectable_package_demo

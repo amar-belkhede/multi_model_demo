@@ -1,0 +1,8 @@
+name: multi_project
+
+packages:
+  - packages/*
+
+scripts:
+  analyze:
+    exec: dart analyze .
