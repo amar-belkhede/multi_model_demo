@@ -1,8 +1,14 @@
 name: multi_project
 
 packages:
-  - packages/*
+  - packages/**
 
 scripts:
   analyze:
     exec: dart analyze .
+
+
+command:
+  bootstrap:
+    hooks:
+      post: dart pub run build_runner build

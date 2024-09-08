@@ -1,3 +1,5 @@
 dependency_overrides:
   injectable_package_demo:
     path: packages/injectable_package_demo
+  custom_dropdown:
+    path: packages/custom_dropdown

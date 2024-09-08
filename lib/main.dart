@@ -1,3 +1,4 @@
+import 'package:custom_dropdown/demo_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable_package_demo/injectable_package_demo.dart';
@@ -50,11 +51,21 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Center(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             InjectableDemopackageButton(),
+            FilledButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DemoCustomDropdownPage()),
+                );
+              },
+              child: Text("Custom dropdown page"),
+            )
           ],
         ),
       ),

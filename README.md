@@ -23,3 +23,34 @@ flutter pub global activate melos
 flutter pub add melos --dev
 
 create melos.yaml file
+
+----------------------------------------------------------------------------------------------------
+
+https://github.com/invertase/melos/issues/541
+
+Git Bash on Windows (fails)
+
+AzureAD+User@computer MINGW64 ~
+$ melos
+bash: melos: command not found
+PowerShell (works)
+
+melos --version
+3.1.0
+
+(Get-Command melos).Path
+C:\Users\AlexanderBarker\AppData\Local\Pub\Cache\bin\melos.bat
+I checked the the path in Git Bash and the correct location of the bat file is defined as expected:
+
+echo $PATH
+...
+/c/Users/AlexanderBarker/AppData/Local/Pub/Cache/bin
+...
+
+-----------------------------------------------------------------------------------------------------
+
+create plugin 
+
+flutter create --org com.example --template=plugin --platforms=android,ios,linux,macos,windows package_name
+
+flutter create --org com.belkhede.amarkumar.customdropdown --template=package custom_dropdown
