@@ -3,3 +3,5 @@ dependency_overrides:
     path: packages/injectable_package_demo
   custom_dropdown:
     path: packages/custom_dropdown
+  register_login:
+    path: packages/register_login

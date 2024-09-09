@@ -39,6 +39,7 @@ dependencies:
   provider: ^6.1.2
   get_it: ^7.7.0
   custom_dropdown: 9.6.9
+  register_login: 6.6.6
 
 dev_dependencies:
   flutter_test:

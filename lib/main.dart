@@ -5,6 +5,7 @@ import 'package:injectable_package_demo/injectable_package_demo.dart';
 import 'package:injectable_package_demo/injection.dart';
 import 'package:injectable_package_demo/presentation/counter_change_notifier.dart';
 import 'package:provider/provider.dart';
+import 'package:register_login/register_login.dart';
 
 final getIt = GetIt.instance;
 void main() {
@@ -65,6 +66,16 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text("Custom dropdown page"),
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const RegisterLoginDemo()),
+                );
+              },
+              child: Text("Register Login Demo page"),
             )
           ],
         ),
