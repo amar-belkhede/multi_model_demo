@@ -54,3 +54,11 @@ create plugin
 flutter create --org com.example --template=plugin --platforms=android,ios,linux,macos,windows package_name
 
 flutter create --org com.belkhede.amarkumar.customdropdown --template=package custom_dropdown
+
+
+
+==============================================================================================
+
+melos.bat exec
+
+melos.bat run test:selective_unit_test

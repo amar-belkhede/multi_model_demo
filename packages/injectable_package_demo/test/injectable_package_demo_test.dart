@@ -27,4 +27,12 @@ void main() {
       verify(mockCounterRepository.getIncrement()).called(1);
     },
   );
+
+  test("injectable package demo test2", () {
+    expect(1, 1);
+  });
+
+  test("injectable package demo test3", () {
+    expect(1, 1);
+  });
 }
