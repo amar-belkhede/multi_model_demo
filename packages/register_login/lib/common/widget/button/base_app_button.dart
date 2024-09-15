@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:register_login/common/bloc/button/button_cubit.dart';
+import 'package:register_login/common/bloc/button/button_state.dart';
 
 class BasicAppButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -14,15 +17,15 @@ class BasicAppButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return _initial(context);
-    // return BlocBuilder<ButtonStateCubit,ButtonState>(
-    //   builder: (context, state) {
-    //     if (state is ButtonLoadingState){
-    //       return _loading(context);
-    //     }
-    //     return _initial(context);
-    //   },
-    // );
+    // return _initial(context);
+    return BlocBuilder<ButtonCubit, ButtonState>(
+      builder: (context, state) {
+        if (state is ButtonLoadingState) {
+          return _loading(context);
+        }
+        return _initial(context);
+      },
+    );
   }
 
   Widget _loading(BuildContext context) {
