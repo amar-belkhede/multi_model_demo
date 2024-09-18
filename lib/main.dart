@@ -1,3 +1,4 @@
+import 'package:animation_travel_app/animation_travel_app.dart';
 import 'package:custom_dropdown/demo_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
@@ -76,6 +77,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text("Register Login Demo page"),
+            ),
+            FilledButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TravelApp()),
+                );
+              },
+              child: Text("Animated travel app"),
             )
           ],
         ),

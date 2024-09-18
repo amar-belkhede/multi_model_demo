@@ -62,3 +62,20 @@ flutter create --org com.belkhede.amarkumar.customdropdown --template=package cu
 melos.bat exec
 
 melos.bat run test:selective_unit_test
+
+
+===========================================================================================
+https://stackoverflow.com/questions/35534766/how-to-create-submodule-in-existing-repo
+
+You simply need to be in your root folder and then add the submodule folder.
+
+git submodule add <url>
+Now when you clone the project you simply need to init and update the submodule
+
+git submodule init
+git submodule update
+Git 1.8.2 features a new option --remote
+
+git submodule update --remote --merge
+
+======================================================================================

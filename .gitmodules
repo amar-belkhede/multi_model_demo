@@ -1,0 +1,3 @@
+[submodule "packages/animation_travel_app"]
+	path = packages/animation_travel_app
+	url = https://github.com/amar-belkhede/animation_travel_app.git
