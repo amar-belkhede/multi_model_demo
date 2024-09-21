@@ -7,3 +7,5 @@ dependency_overrides:
     path: packages/register_login
   animation_travel_app:
     path: packages/animation_travel_app
+  e_commerce_app:
+    path: packages/e_commerce
