@@ -17,6 +17,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.4.1"
+  animate_do:
+    dependency: transitive
+    description:
+      name: animate_do
+      sha256: "7a3162729f0ea042f9dd84da217c5bde5472ad9cef644079929d4304a5dc4ca0"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.3.4"
   animation_travel_app:
     dependency: "direct main"
     description:
@@ -350,6 +358,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
+  google_fonts:
+    dependency: transitive
+    description:
+      name: google_fonts
+      sha256: b1ac0fe2832c9cc95e5e88b57d627c5e68c223b9657f4b96e1487aa9098c7b82
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.2.1"
   graphs:
     dependency: transitive
     description:
@@ -549,6 +565,30 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.9.0"
+  path_provider:
+    dependency: transitive
+    description:
+      name: path_provider
+      sha256: fec0d61223fba3154d87759e3cc27fe2c8dc498f6386c6d6fc80d1afdd1bf378
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.1.4"
+  path_provider_android:
+    dependency: transitive
+    description:
+      name: path_provider_android
+      sha256: "6f01f8e37ec30b07bc424b4deabac37cacb1bc7e2e515ad74486039918a37eb7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.10"
+  path_provider_foundation:
+    dependency: transitive
+    description:
+      name: path_provider_foundation
+      sha256: f234384a3fdd67f989b4d54a5d73ca2a6c422fa55ae694381ae0f4375cd1ea16
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.0"
   path_provider_linux:
     dependency: transitive
     description:
@@ -668,6 +708,14 @@ packages:
       relative: true
     source: path
     version: "6.6.6"
+  shape_of_view_null_safe:
+    dependency: transitive
+    description:
+      name: shape_of_view_null_safe
+      sha256: "5ac76fe9ec3143006ebc29fd7b9dcd4389f01f4cc4c90ad58fc15b48803d40c1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.0"
   shared_preferences:
     dependency: transitive
     description:
@@ -849,6 +897,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.1.0"
+  water_drop_nav_bar:
+    dependency: transitive
+    description:
+      name: water_drop_nav_bar
+      sha256: "65e71c836445f44d63acbc83b1d81f0df74166f95d53c02f9faeb41cc4a2dcb6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.2.2"
   web:
     dependency: transitive
     description:
