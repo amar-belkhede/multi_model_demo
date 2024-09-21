@@ -1,3 +1,6 @@
 [submodule "packages/animation_travel_app"]
 	path = packages/animation_travel_app
 	url = https://github.com/amar-belkhede/animation_travel_app.git
+[submodule "packages/e_commerce"]
+	path = packages/e_commerce
+	url = https://github.com/amar-belkhede/flutter-e-commerce-app.git
