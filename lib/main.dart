@@ -1,5 +1,6 @@
 import 'package:animation_travel_app/animation_travel_app.dart';
 import 'package:custom_dropdown/demo_page.dart';
+import 'package:e_commerce_app/e_commerce_app.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable_package_demo/injectable_package_demo.dart';
@@ -86,7 +87,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 );
               },
               child: Text("Animated travel app"),
-            )
+            ),
+            FilledButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ECommerceApp()),
+                  );
+                },
+                child: Text("E commerce app"))
           ],
         ),
       ),
