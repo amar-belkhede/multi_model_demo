@@ -41,6 +41,7 @@ dependencies:
   custom_dropdown: 9.6.9
   register_login: 6.6.6
   animation_travel_app: 6.6.6
+  e_commerce_app: 6.6.6
 
 dev_dependencies:
   flutter_test:
