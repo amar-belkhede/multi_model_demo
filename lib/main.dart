@@ -1,16 +1,23 @@
 import 'package:animation_travel_app/animation_travel_app.dart';
 import 'package:custom_dropdown/demo_page.dart';
 import 'package:e_commerce_app/e_commerce_app.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable_package_demo/injectable_package_demo.dart';
 import 'package:injectable_package_demo/injection.dart';
 import 'package:injectable_package_demo/presentation/counter_change_notifier.dart';
+import 'package:multi_model_demo/firebase_options.dart';
 import 'package:provider/provider.dart';
 import 'package:register_login/register_login.dart';
 
 final getIt = GetIt.instance;
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   configureInjection(getIt, Env.prod);
   runApp(MultiProvider(
     providers: [

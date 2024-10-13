@@ -79,3 +79,7 @@ Git 1.8.2 features a new option --remote
 git submodule update --remote --merge
 
 ======================================================================================
+
+npm install -g firebase-tools
+dart pub global activate flutterfire_cli
+flutterfire configure
